@@ -8,15 +8,16 @@ function Appointment(props) {
   const sendSMS = (id) => {
     async function doSMS() {
       let payload = {
+        housekey: id,
         customerName: document.getElementById("customer-" + id).value,
         msg: document.getElementById("msg-" + id).value,
         tel: document.getElementById("tel-" + id).value,
         email: document.getElementById("email-" + id).value,
         date: document.getElementById("date-" + id).value,
         time: document.getElementById("time-" + id).value,
-        housekey: id,
       };
       console.log(payload);
+      //fetch = send response to server
       let response = await fetch("http://localhost:3001/sms", {
         method: "POST",
         body: JSON.stringify(payload),

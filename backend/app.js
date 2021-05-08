@@ -47,8 +47,8 @@ app.get("/houses", (req, res) => {
 app.post("/sms", (req, res) => {
   let message = `A customer name ${req.body.customerName} has requested a viewing of a property No ${req.body.housekey} at ${req.body.date} ${req.body.time}. The customer email is ${req.body.email} and phone number ${req.body.tel} Customer note: ${req.body.msg}`;
   let messageToCustomer = `Hi ${req.body.customerName}! Thank you we have received your enquiry for a viewing of a property No ${req.body.housekey} at ${req.body.date} ${req.body.time}. Your email address is ${req.body.email} and phone number ${req.body.tel}. Your note: ${req.body.msg}. An agent will contact shortly`;
-  sendSMS(message, req.body.tel);
-  sendSMS(messageToCustomer, req.body.tel);
+  sendSMS(message, "07581535855"); // Agent number
+  sendSMS(messageToCustomer, req.body.tel); //Customer number
   console.log(message);
   res.type("application/json");
   res.send(JSON.stringify("OK"));
@@ -90,7 +90,7 @@ function sendSMS(msg, phoneNumber) {
   var endpoint = "sendsms";
   var urlArgs = {
     apiKey: apiKey,
-    to: "447123456789",
+    to: phoneNumber,
     from: "Firetext",
     message: msg, //<-use the same parameter here instead
   };
