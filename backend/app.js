@@ -33,6 +33,27 @@ houses.push({
   type: "Maisonette",
   image: `https://media.rightmove.co.uk/dir/crop/10:9-16:9/73k/72455/97846952/72455_107VC_IMG_00_0000_max_476x317.jpg`,
 });
+houses.push({
+  id: 4,
+  price: 329950,
+  area: "Sandhurst",
+  type: "House",
+  image: `https://media.rightmove.co.uk/90k/89518/80000376/89518_CBW206916_IMG_05_0000.jpeg`,
+});
+houses.push({
+  id: 5,
+  price: 2995000,
+  area: "Edgbaston",
+  type: "House",
+  image: `https://media.rightmove.co.uk/188k/187751/87749239/187751_BRM012098024_IMG_00_0001.jpeg`,
+});
+houses.push({
+  id: 6,
+  price: 1995000,
+  area: "Digbeth",
+  type: "Apartment",
+  image: `https://media.rightmove.co.uk/163k/162914/77376585/162914_CAN210196_IMG_01_0000.jpg`,
+});
 
 // var bodyParser = require("body-parser");
 // app.use(express.urlencoded({ extended: true }));
