@@ -36,3 +36,17 @@
     transform: rotate(360deg);
   }
 }
+
+.tile {
+  max-width: 300px;
+  min-height: 300px;
+  border: solid 3px blue;
+  background-color: pink;
+  display: inline-block;
+  margin: 10px;
+  padding: 10px;
+}
+
+.tile img {
+  max-width: 300px;
+}
